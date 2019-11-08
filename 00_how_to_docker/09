@@ -1,4 +1,5 @@
-#docker pull debian
-#docker run -it --rm debian
-
-apt update
+docker pull debian
+docker run -dt --name dick debian
+docker exec dick apt-get update
+docker exec dick apt-get install -y gcc
+docker exec dick apt-get install -y git
